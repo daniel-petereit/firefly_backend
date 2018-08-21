@@ -59,7 +59,6 @@ const loginUser = (req, res, next) => {
         },
         exp: parseInt(Date.now() + 100000, 10)
       }
-      console.log(SECRET);
       return jwtSignAsync(payload, SECRET)
     })
     .then((token) => {
